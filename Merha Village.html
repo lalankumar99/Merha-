@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10b981">
+    
+    <!-- ================= SEO TAGS (सर्च इंजन के लिए) ================= -->
+    <meta name="description" content="मेढ़ा गाँव (Merha Village) के डिजिटल प्लेटफॉर्म में आपका स्वागत है। यहाँ गाँव के लोग आपस में जुड़ सकते हैं और अपने घर, समाज और गाँव की ताज़ा ख़बरें साझा कर सकते हैं।">
+    <meta name="keywords" content="Merha, मेढ़ा, Merha Village, मेढ़ा गाँव, Katoria, Banka, Bihar, Digital Village, Merha Panchayat">
+    <meta name="author" content="Merha Community">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags (Facebook, WhatsApp पर शेयर करने पर अच्छा दिखेगा) -->
+    <meta property="og:title" content="Merha Village (मेढ़ा) - Digital Community">
+    <meta property="og:description" content="मेढ़ा गाँव के डिजिटल नेटवर्क से जुड़ें। गाँव की हर ख़बर, हर घर की बात, अब ऑनलाइन।">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://merhavillage.com"> 
+    
+    <title>Merha Village (मेढ़ा) - Digital Community</title>
+
+    <style>
+        /* ================= STYLING (डिजाइन और लुक) ================= */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary: #10b981;
+            --primary-dark: #059669;
+            --primary-light: #d1fae5;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Header with 3D Parallax feel */
+        header {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.85), rgba(5, 150, 105, 0.95)), url('https://images.unsplash.com/photo-1596788068892-411a0033fa0d?auto=format&fit=crop&w=1200&q=80') center/cover fixed;
+            color: white;
+            padding: 5rem 1rem 4rem;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: 0 15px 25px -5px rgba(16, 185, 129, 0.2);
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 20px;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            letter-spacing: 1px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 300;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out 0.3s backwards;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: -50px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Cards with 3D Effect */
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border-top: 1px solid rgba(255,255,255,0.5);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.25);
+        }
+
+        .card h2 {
+            color: var(--primary-dark);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 10px;
+        }
+
+        /* Post Creation Form */
+        .post-form textarea, .post-form input {
+            width: 100%;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            outline: none;
+            transition: all 0.3s ease;
+            background-color: #f9fafb;
+        }
+
+        .post-form input {
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .post-form textarea {
+            padding: 15px;
+            resize: vertical;
+            min-height: 120px;
+            margin-bottom: 15px;
+        }
+
+        .post-form textarea:focus, .post-form input:focus {
+            border-color: var(--primary);
+            background-color: white;
+            box-shadow: 0 0 0 4px var(--primary-light);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        /* Feed Styles with Animations */
+        .feed-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .post-item {
+            border: 1px solid #f3f4f6;
+            border-left: 5px solid var(--primary);
+            padding: 20px;
+            border-radius: 12px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+
+        .post-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left-width: 8px;
+        }
+
+        /* Animation class for new posts */
+        .slide-in {
+            animation: slideInDown 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .post-author {
+            font-weight: 700;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .post-author::before {
+            content: '👤';
+            font-size: 1.2rem;
+            background: var(--primary-light);
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        .post-time {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background: #f3f4f6;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .post-content {
+            color: #4b5563;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Clean Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 1rem;
+            background-color: white;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        /* Keyframes for Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInDown {
+            from { 
+                opacity: 0; 
+                transform: translateY(-30px) scale(0.95); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0) scale(1); 
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.4rem; }
+            .container { margin-top: -30px; }
+            .card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>मेढ़ा (Merha)</h1>
+        <p>हमारा गाँव, हमारी शान - डिजिटल पहचान</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="card post-form">
+            <h2>✍️ अपनी बात साझा करें</h2>
+            
+            <input type="text" id="userName" placeholder="आपका नाम (जैसे: राहुल कुमार)" required>
+            <textarea id="postContent" placeholder="आज गाँव में क्या नया हो रहा है? अपने विचार या कोई सूचना यहाँ लिखें..."></textarea>
+            
+            <button class="btn" onclick="addPost()">अपडेट पोस्ट करें</button>
+        </div>
+
+        <div class="card">
+            <h2>📢 ताज़ा अपडेट्स</h2>
+            <div class="feed-container" id="feedContainer">
+                
+                <div class="post-item">
+                    <div class="post-header">
+                        <span class="post-author">ग्राम पंचायत</span>
+                        <span class="post-time">आज</span>
+                    </div>
+                    <div class="post-content">
+                        मेढ़ा गाँव के इस डिजिटल प्लेटफॉर्म पर सभी ग्रामवासियों का हार्दिक स्वागत है। अब हम सब ऑनलाइन जुड़कर गाँव की हर जानकारी साझा कर सकते हैं।
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 मेढ़ा गाँव, कटोरिया (बांका)। सभी अधिकार सुरक्षित।</p>
+    </footer>
+
+    <script>
+        function addPost() {
+            const nameInput = document.getElementById('userName');
+            const contentInput = document.getElementById('postContent');
+            const feedContainer = document.getElementById('feedContainer');
+
+            const name = nameInput.value.trim();
+            const content = contentInput.value.trim();
+
+            if (name === "" || content === "") {
+                // Using a custom message box instead of alert
+                showCustomMessage("कृपया अपना नाम और संदेश दोनों भरें!");
+                return;
+            }
+
+            // Create new post element
+            const newPost = document.createElement('div');
+            // Add 'slide-in' class for the animation
+            newPost.className = 'post-item slide-in';
+            
+            const timeString = new Date().toLocaleTimeString('hi-IN', { hour: '2-digit', minute: '2-digit' });
+
+            newPost.innerHTML = `
+                <div class="post-header">
+                    <span class="post-author">${name}</span>
+                    <span class="post-time">${timeString}</span>
+                </div>
+                <div class="post-content">
+                    ${content}
+                </div>
+            `;
+
+            // Add the new post to the top of the feed
+            feedContainer.insertBefore(newPost, feedContainer.firstChild);
+
+            // Clear the inputs
+            contentInput.value = '';
+            
+            // Button feedback animation
+            const btn = document.querySelector('.btn');
+            const originalText = btn.innerText;
+            btn.innerText = "✓ पोस्ट हो गया!";
+            btn.style.background = "linear-gradient(135deg, #059669, #047857)";
+            
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.background = ""; // Revert to original CSS gradient
+            }, 2000);
+        }
+
+        // Custom Message Function (replacing default alert)
+        function showCustomMessage(msg) {
+            const msgBox = document.createElement('div');
+            msgBox.style.position = 'fixed';
+            msgBox.style.bottom = '20px';
+            msgBox.style.left = '50%';
+            msgBox.style.transform = 'translateX(-50%)';
+            msgBox.style.backgroundColor = '#ef4444'; // Red for error
+            msgBox.style.color = 'white';
+            msgBox.style.padding = '12px 24px';
+            msgBox.style.borderRadius = '8px';
+            msgBox.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            msgBox.style.zIndex = '1000';
+            msgBox.style.fontWeight = '600';
+            msgBox.style.animation = 'fadeInUp 0.3s ease-out';
+            
+            msgBox.innerText = msg;
+            document.body.appendChild(msgBox);
+
+            setTimeout(() => {
+                msgBox.style.opacity = '0';
+                msgBox.style.transition = 'opacity 0.3s ease';
+                setTimeout(() => msgBox.remove(), 300);
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
