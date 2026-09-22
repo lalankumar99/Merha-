@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>ग्राम मेड़ा, कटोरिया, बांका, बिहार | Merha Village Official Portal</title>
+    <meta name="description" content="ग्राम मेड़ा (Merha Village), कटोरिया, बांका, बिहार का आधिकारिक डिजिटल पोर्टल। गांव की संस्कृति, इतिहास, प्राकृतिक सुंदरता, शिक्षा, और स्थानीय सेवाओं की जानकारी।">
+    <meta name="keywords" content="ग्राम मेड़ा, मेड़ा गांव, Merha Village, Merha Banka, Merha Katoria, ग्राम मेड़ा कटोरिया, ग्राम मेड़ा बांका, Katoria Banka Bihar, Bihar Village, Merha Village Bihar">
+    <meta name="author" content="ग्राम मेड़ा डिजिटल पोर्टल">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://merha.vercel.app/"> 
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="ग्राम मेड़ा, कटोरिया, बांका, बिहार | Merha Village">
+    <meta property="og:description" content="ग्राम मेड़ा (Merha Village) से जुड़ी हर जानकारी, विकास कार्य, गैलरी, और शिक्षा की जानकारी एक ही डिजिटल मंच पर।">
+    <meta property="og:image" content="https://placehold.co/1200x630/2E7D32/FFFFFF?text=Merha+Village+Banka"> 
+    <meta property="og:url" content="https://merha.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="hi_IN">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ग्राम मेड़ा | Merha Village, Banka, Bihar">
+    <meta name="twitter:description" content="ग्राम मेड़ा से जुड़ी हर जानकारी, विकास कार्य, गैलरी, और शिक्षा की जानकारी एक ही डिजिटल मंच पर।">
+    <meta name="twitter:image" content="https://placehold.co/1200x600/2E7D32/FFFFFF?text=Merha+Village"> 
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Mukta', 'Noto Sans Devanagari', 'Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        village: {
+                            50: '#f2fcf5',
+                            100: '#e1f8e8',
+                            200: '#c3efd3',
+                            300: '#94dfb2',
+                            400: '#5ec48a',
+                            500: '#38a66a',
+                            600: '#278552',
+                            700: '#216a43',
+                            800: '#1d5538',
+                            900: '#194630',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'glow': '0 0 20px rgba(56, 166, 106, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #f8fafc;
+            overflow-x: hidden;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #38a66a; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #216a43; 
+        }
+
+        /* Glassmorphism utilities */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* Animated Background Gradient */
+        .animated-bg {
+            background: linear-gradient(-45deg, #278552, #38a66a, #1d5538, #216a43);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Animation */
+        .float-anim {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Hover Effects */
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Text Gradient */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #1d5538, #38a66a);
+        }
+
+        /* Section Title Underline */
+        .title-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .title-underline::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            bottom: -10px;
+            left: 25%;
+            background: linear-gradient(90deg, transparent, #38a66a, transparent);
+            border-radius: 2px;
+        }
+        
+        .title-underline-left::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            bottom: -8px;
+            left: 0;
+            background: #38a66a;
+            border-radius: 2px;
+        }
+
+        /* Map Container Styling */
+        .map-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Mobile Menu */
+        #mobile-menu {
+            transition: all 0.4s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+        }
+        #mobile-menu.open {
+            max-height: 500px;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://merha.vercel.app/#website",
+          "url": "https://merha.vercel.app/",
+          "name": "ग्राम मेड़ा (Merha Village)",
+          "description": "ग्राम मेड़ा, कटोरिया, बांका, बिहार का डिजिटल पोर्टल",
+          "publisher": {
+            "@id": "https://merha.vercel.app/#organization"
+          },
+          "inLanguage": "hi"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://merha.vercel.app/#place",
+          "name": "Merha Village",
+          "alternateName": "ग्राम मेड़ा",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Katoria",
+            "addressRegion": "Bihar",
+            "addressCountry": "IN"
+          },
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Banka District"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://merha.vercel.app/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "होम",
+              "item": "https://merha.vercel.app/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="antialiased flex flex-col min-h-screen text-gray-800">
+
+    <!-- Header -->
+    <header class="glass-nav sticky top-0 z-50 transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3 group cursor-pointer" onclick="window.location.href='index.html'">
+                    <div class="w-12 h-12 bg-gradient-to-br from-village-500 to-village-700 text-white rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-glow transition-all duration-300 transform group-hover:rotate-3">
+                        <i class="fa-solid fa-leaf text-2xl"></i>
+                    </div>
+                    <div>
+                        <a href="index.html" class="text-2xl font-bold text-gray-900 tracking-wide block leading-tight group-hover:text-village-600 transition-colors">ग्राम मेड़ा</a>
+                        <span class="text-[10px] sm:text-xs font-semibold text-village-500 uppercase tracking-[0.2em] block">Merha Village</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-1 lg:space-x-4 items-center" aria-label="Main Navigation">
+                    <a href="index.html" class="px-3 py-2 text-village-700 font-bold relative after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-village-600 after:bottom-0 after:left-0">होम</a>
+                    <a href="about.html" class="px-3 py-2 text-gray-600 font-medium hover:text-village-600 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-village-400 after:bottom-0 after:left-0 hover:after:w-full transition-all after:transition-all">गांव के बारे में</a>
+                    <a href="gallery.html" class="px-3 py-2 text-gray-600 font-medium hover:text-village-600 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-village-400 after:bottom-0 after:left-0 hover:after:w-full transition-all after:transition-all">गैलरी</a>
+                    <a href="education.html" class="px-3 py-2 text-gray-600 font-medium hover:text-village-600 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-village-400 after:bottom-0 after:left-0 hover:after:w-full transition-all after:transition-all">शिक्षा</a>
+                    <a href="services.html" class="px-3 py-2 text-gray-600 font-medium hover:text-village-600 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-village-400 after:bottom-0 after:left-0 hover:after:w-full transition-all after:transition-all">सेवाएं</a>
+                    <a href="#location-section" class="ml-2 px-5 py-2.5 bg-village-600 hover:bg-village-700 text-white text-sm font-semibold rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-map-location-dot mr-1.5"></i> मैप देखें
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="w-10 h-10 bg-village-50 text-village-700 rounded-lg flex flex-col justify-center items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-village-500 transition-colors" aria-label="Toggle Menu" aria-expanded="false">
+                        <span class="w-6 h-0.5 bg-current transition-transform duration-300 origin-center" id="bar1"></span>
+                        <span class="w-6 h-0.5 bg-current transition-opacity duration-300" id="bar2"></span>
+                        <span class="w-6 h-0.5 bg-current transition-transform duration-300 origin-center" id="bar3"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <nav id="mobile-menu" class="md:hidden absolute w-full bg-white shadow-xl border-t border-gray-100 z-40 origin-top" aria-label="Mobile Navigation">
+            <div class="px-4 pt-3 pb-6 space-y-2">
+                <a href="index.html" class="bg-village-50 text-village-700 flex items-center px-4 py-3.5 rounded-xl text-base font-bold"><i class="fa-solid fa-house w-8 text-lg"></i> होम</a>
+                <a href="about.html" class="text-gray-700 hover:bg-village-50 hover:text-village-700 flex items-center px-4 py-3.5 rounded-xl text-base font-medium transition-colors"><i class="fa-solid fa-circle-info w-8 text-lg text-gray-400"></i> गांव के बारे में</a>
+                <a href="gallery.html" class="text-gray-700 hover:bg-village-50 hover:text-village-700 flex items-center px-4 py-3.5 rounded-xl text-base font-medium transition-colors"><i class="fa-solid fa-images w-8 text-lg text-gray-400"></i> गैलरी</a>
+                <a href="education.html" class="text-gray-700 hover:bg-village-50 hover:text-village-700 flex items-center px-4 py-3.5 rounded-xl text-base font-medium transition-colors"><i class="fa-solid fa-book-open w-8 text-lg text-gray-400"></i> शिक्षा</a>
+                <a href="services.html" class="text-gray-700 hover:bg-village-50 hover:text-village-700 flex items-center px-4 py-3.5 rounded-xl text-base font-medium transition-colors"><i class="fa-solid fa-hands-holding-circle w-8 text-lg text-gray-400"></i> सेवाएं</a>
+                <div class="pt-2">
+                    <a href="#location-section" class="w-full flex justify-center items-center px-4 py-3.5 bg-village-600 text-white rounded-xl text-base font-bold shadow-md">
+                        <i class="fa-solid fa-map-location-dot mr-2"></i> मैप व लोकेशन
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1595841696250-2070e1b1064a?q=80&w=2070&auto=format&fit=crop" 
+                     alt="ग्राम मेड़ा कटोरिया बांका बिहार का प्राकृतिक दृश्य" 
+                     class="w-full h-full object-cover object-center transform scale-105"
+                     style="filter: brightness(0.8) contrast(1.1);"
+                     loading="eager"
+                     fetchpriority="high">
+                <!-- Overlay Gradients -->
+                <div class="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-900/50 to-village-900/90 mix-blend-multiply"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+            </div>
+            
+            <!-- Animated decorative elements -->
+            <div class="absolute top-20 right-20 w-64 h-64 bg-village-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse z-0"></div>
+            <div class="absolute bottom-20 left-10 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000 z-0"></div>
+
+            <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex flex-col lg:flex-row items-center">
+                
+                <!-- Text Content -->
+                <div class="w-full lg:w-3/5 text-center lg:text-left pt-10" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-white text-sm font-semibold tracking-wider mb-6 shadow-xl">
+                        <span class="w-2 h-2 rounded-full bg-green-400 animate-ping"></span>
+                        आधिकारिक डिजिटल पोर्टल
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-2xl">
+                        ग्राम <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-village-400">मेड़ा</span> <br class="hidden sm:block"/>
+                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-200 mt-2 block">कटोरिया, बांका, बिहार</span>
+                    </h1>
+                    
+                    <p class="mt-4 text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium drop-shadow-md leading-relaxed border-l-4 border-village-400 pl-4 py-1 bg-gradient-to-r from-black/30 to-transparent">
+                        ग्राम मेड़ा की संस्कृति, इतिहास, प्राकृतिक सुंदरता, शिक्षा, स्थानीय सेवाओं और विकास से जुड़ी जानकारी एक ही डिजिटल मंच पर।
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+                        <a href="about.html" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-village-600 to-village-500 hover:from-village-500 hover:to-village-400 text-white font-bold rounded-xl shadow-xl shadow-village-600/30 transition-all duration-300 transform hover:-translate-y-1 text-center border border-village-400/50 flex items-center justify-center group">
+                            गांव के बारे में <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#location-section" class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl shadow-lg backdrop-blur-md transition-all duration-300 border border-white/30 text-center flex items-center justify-center hover:-translate-y-1">
+                            <i class="fa-solid fa-location-dot mr-2 text-village-300"></i> मैप देखें
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Floating Card / Badge (Desktop Only) -->
+                <div class="hidden lg:flex w-full lg:w-2/5 justify-end" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="glass-card p-6 rounded-3xl shadow-2xl float-anim border border-white/40 max-w-sm w-full bg-white/20 backdrop-blur-xl">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-village-600 text-2xl shadow-inner">
+                                <i class="fa-solid fa-sun"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-xl drop-shadow-md">प्राकृतिक सौंदर्य</h3>
+                                <p class="text-gray-100 text-sm">शांत और स्वच्छ वातावरण</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3 mt-6">
+                            <div class="bg-white/30 rounded-xl p-3 text-center border border-white/20 backdrop-blur-md">
+                                <i class="fa-solid fa-users text-white text-xl mb-1"></i>
+                                <div class="text-white text-xs font-semibold">सामुदायिक</div>
+                            </div>
+                            <div class="bg-white/30 rounded-xl p-3 text-center border border-white/20 backdrop-blur-md">
+                                <i class="fa-solid fa-seedling text-white text-xl mb-1"></i>
+                                <div class="text-white text-xs font-semibold">कृषि प्रधान</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Curved Bottom Shape -->
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+                <svg class="relative block w-full h-12 md:h-20" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.93,191.9,109.84Z" fill="#f8fafc"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Quick Access Features -->
+        <section class="py-12 relative z-20 px-4 sm:px-6 lg:px-8 -mt-16 md:-mt-24">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+                    <!-- Card 1 -->
+                    <a href="about.html" class="bg-white rounded-2xl shadow-soft p-5 flex flex-col items-center justify-center text-center hover-lift border border-gray-100 group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-14 h-14 bg-gradient-to-br from-green-50 to-green-100 text-village-600 rounded-full flex items-center justify-center mb-4 group-hover:bg-village-600 group-hover:text-white transition-colors duration-300 shadow-inner">
+                            <i class="fa-solid fa-book-open-reader text-2xl"></i>
+                        </div>
+                        <h2 class="text-sm sm:text-base font-bold text-gray-800">गांव का परिचय</h2>
+                    </a>
+                    <!-- Card 2 -->
+                    <a href="gallery.html" class="bg-white rounded-2xl shadow-soft p-5 flex flex-col items-center justify-center text-center hover-lift border border-gray-100 group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-14 h-14 bg-gradient-to-br from-blue-50 to-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-inner">
+                            <i class="fa-regular fa-images text-2xl"></i>
+                        </div>
+                        <h2 class="text-sm sm:text-base font-bold text-gray-800">फोटो गैलरी</h2>
+                    </a>
+                    <!-- Card 3 -->
+                    <a href="education.html" class="bg-white rounded-2xl shadow-soft p-5 flex flex-col items-center justify-center text-center hover-lift border border-gray-100 group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-14 h-14 bg-gradient-to-br from-purple-50 to-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-4 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300 shadow-inner">
+                            <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                        </div>
+                        <h2 class="text-sm sm:text-base font-bold text-gray-800">शिक्षा व कोचिंग</h2>
+                    </a>
+                    <!-- Card 4 -->
+                    <a href="services.html" class="bg-white rounded-2xl shadow-soft p-5 flex flex-col items-center justify-center text-center hover-lift border border-gray-100 group" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-14 h-14 bg-gradient-to-br from-orange-50 to-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-4 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shadow-inner">
+                            <i class="fa-solid fa-building-columns text-2xl"></i>
+                        </div>
+                        <h2 class="text-sm sm:text-base font-bold text-gray-800">ग्राम सेवाएं</h2>
+                    </a>
+                    <!-- Card 5 -->
+                    <a href="#location-section" class="bg-white rounded-2xl shadow-soft p-5 flex flex-col items-center justify-center text-center hover-lift border border-gray-100 group" data-aos="fade-up" data-aos-delay="500">
+                        <div class="w-14 h-14 bg-gradient-to-br from-red-50 to-red-100 text-red-600 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300 shadow-inner">
+                            <i class="fa-solid fa-map-location-dot text-2xl"></i>
+                        </div>
+                        <h2 class="text-sm sm:text-base font-bold text-gray-800">लोकेशन व मैप</h2>
+                    </a>
+                    <!-- Card 6 -->
+                    <a href="#updates-section" class="bg-white rounded-2xl shadow-soft p-5 flex flex-col items-center justify-center text-center hover-lift border border-gray-100 group" data-aos="fade-up" data-aos-delay="600">
+                        <div class="w-14 h-14 bg-gradient-to-br from-teal-50 to-teal-100 text-teal-600 rounded-full flex items-center justify-center mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300 shadow-inner">
+                            <i class="fa-solid fa-bullhorn text-2xl"></i>
+                        </div>
+                        <h2 class="text-sm sm:text-base font-bold text-gray-800">ताजा सूचनाएं</h2>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-20 bg-white" aria-labelledby="about-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
+                        <!-- Decorative square -->
+                        <div class="absolute -top-6 -left-6 w-24 h-24 bg-village-100 rounded-xl -z-10"></div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-orange-50 rounded-full -z-10"></div>
+                        
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform hover:scale-[1.02] transition-transform duration-500">
+                            <!-- Placeholder image for village scene -->
+                            <img src="https://images.unsplash.com/photo-1596708761225-b22301980860?q=80&w=2071&auto=format&fit=crop" 
+                                 alt="ग्राम मेड़ा का एक दृश्य - खेत और हरियाली" 
+                                 class="w-full h-auto object-cover aspect-[4/3]"
+                                 loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <span class="bg-village-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block shadow-sm">कटोरिया, बांका</span>
+                                <h3 class="font-bold text-2xl text-white drop-shadow-md">शांत और हरा-भरा वातावरण</h3>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute top-10 -right-8 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
+                            <div class="w-12 h-12 bg-village-100 text-village-600 rounded-full flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-bold uppercase">प्रकृति</p>
+                                <p class="text-sm font-extrabold text-gray-800">ग्रामीण जीवन</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full lg:w-1/2" data-aos="fade-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-village-50 text-village-700 border border-village-200 rounded-full text-sm font-bold mb-6">
+                            <i class="fa-solid fa-info-circle"></i> परिचय
+                        </div>
+                        
+                        <h2 id="about-heading" class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 title-underline-left leading-tight">
+                            ग्राम मेड़ा (Merha Village) <br>
+                            <span class="text-village-600 text-2xl md:text-3xl font-bold mt-2 block">एक झलक</span>
+                        </h2>
+                        
+                        <div class="space-y-5 text-gray-600 text-lg leading-relaxed mt-8">
+                            <p>
+                                <strong>ग्राम मेड़ा</strong> बिहार राज्य के <strong>बांका जिले</strong> के <strong>कटोरिया प्रखंड</strong> में स्थित एक सुंदर और विकासशील गांव है। यह गांव अपनी जीवंत ग्रामीण संस्कृति, स्वच्छ प्राकृतिक वातावरण और शांतिपूर्ण जीवनशैली के लिए जाना जाता है।
+                            </p>
+                            <p>
+                                कृषि यहाँ के निवासियों का मुख्य आधार है। हरे-भरे खेत, स्थानीय तालाब और लोगों के बीच का सामुदायिक सौहार्द इस गांव की प्रमुख पहचान हैं। यहाँ के लोग अपनी परंपराओं को सहेज कर रखते हैं और सभी प्रमुख त्योहार मिल-जुलकर मनाते हैं।
+                            </p>
+                            <div class="bg-gray-50 border-l-4 border-village-500 p-5 rounded-r-xl shadow-sm italic text-gray-700 text-base">
+                                "इस पोर्टल का उद्देश्य ग्राम मेड़ा की हर महत्वपूर्ण जानकारी, शिक्षा, और विकास कार्यों को स्थानीय निवासियों और बाहर रहने वाले ग्रामीणों तक डिजिटल माध्यम से पहुँचाना है।"
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <a href="about.html" class="inline-flex items-center px-8 py-3.5 rounded-xl shadow-md text-white bg-gray-900 hover:bg-village-700 font-semibold transition-all duration-300 group">
+                                गांव का पूरा इतिहास पढ़ें 
+                                <span class="bg-white/20 w-8 h-8 rounded-full flex items-center justify-center ml-3 group-hover:translate-x-1 transition-transform">
+                                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location / Map Section -->
+        <section id="location-section" class="py-20 bg-gray-50 relative overflow-hidden" aria-labelledby="location-heading">
+            <!-- Background Elements -->
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-village-50 -skew-x-12 transform origin-top -z-10"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <span class="text-village-600 font-bold tracking-wider uppercase text-sm mb-2 block">लोकेशन</span>
+                    <h2 id="location-heading" class="text-3xl md:text-4xl font-extrabold text-gray-900 title-underline">ग्राम मेड़ा कैसे पहुँचें?</h2>
+                    <p class="mt-6 text-gray-600 text-lg max-w-2xl mx-auto">
+                        ग्राम मेड़ा, कटोरिया प्रखंड, बांका जिले में स्थित है। नीचे दिए गए इंटरेक्टिव मैप की मदद से आप गांव की सटीक लोकेशन देख सकते हैं।
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col lg:flex-row" data-aos="zoom-in" data-aos-delay="100">
+                    
+                    <!-- Map Information Panel -->
+                    <div class="w-full lg:w-1/3 p-8 lg:p-10 bg-gradient-to-br from-gray-900 to-gray-800 text-white flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-6 flex items-center">
+                            <i class="fa-solid fa-map-location-dot text-village-400 mr-3 text-3xl"></i>
+                            पता एवं संपर्क
+                        </h3>
+                        
+                        <ul class="space-y-6 text-gray-300">
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-location-dot text-red-400"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-white mb-1">ग्राम / स्थान:</strong>
+                                    ग्राम मेड़ा, पंचायत (संबंधित),<br>
+                                    प्रखंड - कटोरिया, जिला - बांका,<br>
+                                    बिहार, भारत
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-map-pin text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-white mb-1">पिन कोड:</strong>
+                                    [ADD VERIFIED PIN CODE]
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-road text-yellow-400"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-white mb-1">मुख्य मार्ग:</strong>
+                                    कटोरिया मुख्य बाजार से जुड़ा हुआ। पटना और देवघर (झारखंड) से सड़क मार्ग द्वारा आसानी से पहुँचा जा सकता है।
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-10">
+                            <a href="https://maps.google.com/?q=Merha,Katoria,Banka,Bihar" target="_blank" rel="noopener noreferrer" class="w-full block text-center py-4 bg-village-600 hover:bg-village-500 text-white font-bold rounded-xl transition-colors shadow-lg">
+                                <i class="fa-solid fa-diamond-turn-right mr-2"></i> दिशा-निर्देश (Directions) प्राप्त करें
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Map (Iframe) -->
+                    <div class="w-full lg:w-2/3 h-[400px] lg:h-auto relative bg-gray-200">
+                        <!-- Google Maps Iframe pointing generally to Katoria/Banka region as placeholder until exact Merha coords are set -->
+                        <!-- Note: Replace 'Katoria,+Banka,+Bihar' with exact 'Merha,+Katoria' once indexed well on Maps -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116244.57796071478!2d86.51659170868843!3d24.59600898858999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f1396a66b96e95%3A0x6a1f86f68c34479e!2sKatoria%2C%20Bihar!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; position:absolute; top:0; left:0; right:0; bottom:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Map showing location of Katoria, Banka (Near Merha Village)">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Updates Section -->
+        <section id="updates-section" class="py-20 bg-white" aria-labelledby="updates-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-100 pb-6">
+                    <div data-aos="fade-right">
+                        <span class="text-orange-600 font-bold tracking-wider uppercase text-sm mb-2 block">सूचना पट्ट</span>
+                        <h2 id="updates-heading" class="text-3xl md:text-4xl font-extrabold text-gray-900">गांव की नई जानकारी</h2>
+                    </div>
+                    <a href="#all-updates" class="hidden md:inline-flex items-center text-village-600 font-bold hover:text-village-800 transition-colors" data-aos="fade-left">
+                        सभी सूचनाएं देखें <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Update Item 1 -->
+                    <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col h-full hover-lift" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-2 bg-blue-500 w-full"></div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded-full border border-blue-100">ग्राम पंचायत</span>
+                                <span class="text-gray-400 text-sm font-medium"><i class="fa-regular fa-calendar-days mr-1"></i> अपडेटेड</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">ग्राम विकास कार्यों की सूचना</h3>
+                            <p class="text-gray-600 mb-4 flex-grow line-clamp-3 text-sm">गांव में चल रहे नए विकास कार्यों, सड़क निर्माण और पंचायत द्वारा ली गई अन्य जन-कल्याणकारी पहलों की जानकारी यहाँ अपडेट की जाएगी।</p>
+                            <a href="#" class="text-blue-600 font-semibold text-sm hover:underline mt-auto inline-flex items-center">
+                                पूरा पढ़ें <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Update Item 2 -->
+                    <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col h-full hover-lift" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-2 bg-orange-500 w-full"></div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-orange-50 text-orange-700 text-xs font-bold px-3 py-1 rounded-full border border-orange-100">त्योहार / संस्कृति</span>
+                                <span class="text-gray-400 text-sm font-medium"><i class="fa-regular fa-calendar-days mr-1"></i> आगामी</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">स्थानीय मेला और पूजा की तैयारी</h3>
+                            <p class="text-gray-600 mb-4 flex-grow line-clamp-3 text-sm">गांव के धार्मिक स्थलों और सार्वजनिक स्थानों पर होने वाले आगामी त्योहारों, मेलों और सांस्कृतिक कार्यक्रमों की सूचना।</p>
+                            <a href="#" class="text-orange-600 font-semibold text-sm hover:underline mt-auto inline-flex items-center">
+                                पूरा पढ़ें <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Update Item 3 -->
+                    <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100 flex flex-col h-full hover-lift" data-aos="fade-up" data-aos-delay="300">
+                        <div class="h-2 bg-purple-500 w-full"></div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full border border-purple-100">शिक्षा / रोजगार</span>
+                                <span class="text-gray-400 text-sm font-medium"><i class="fa-regular fa-calendar-days mr-1"></i> महत्वपूर्ण</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">विद्यालय संबंधी आवश्यक सूचना</h3>
+                            <p class="text-gray-600 mb-4 flex-grow line-clamp-3 text-sm">स्थानीय विद्यालयों से संबंधित महत्वपूर्ण सूचनाएं, नामांकन, परीक्षा की तिथियां और छात्रों के लिए उपयोगी जानकारी।</p>
+                            <a href="#" class="text-purple-600 font-semibold text-sm hover:underline mt-auto inline-flex items-center">
+                                पूरा पढ़ें <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center md:hidden">
+                    <a href="#all-updates" class="inline-block w-full py-3 bg-gray-100 text-gray-700 font-bold rounded-xl hover:bg-gray-200 transition-colors">
+                        सभी सूचनाएं देखें
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white relative overflow-hidden">
+        <!-- Decorative Top Border -->
+        <div class="h-2 w-full animated-bg"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-gray-800 pb-12">
+                <!-- Brand Info -->
+                <div class="col-span-1 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-village-600 rounded-xl flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-leaf text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold tracking-wide text-white">ग्राम मेड़ा</h2>
+                            <span class="text-[10px] text-gray-400 uppercase tracking-widest block">Digital Portal</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        यह ग्राम मेड़ा (कटोरिया, बांका, बिहार) का कम्युनिटी डिजिटल पोर्टल है। हमारा उद्देश्य गांव की जानकारी, विकास और संस्कृति को डिजिटल पटल पर लाना है।
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-400 hover:text-white transition-all transform hover:scale-110">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-green-500 hover:text-white transition-all transform hover:scale-110">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6 text-white relative inline-block after:content-[''] after:absolute after:w-1/2 after:h-0.5 after:bg-village-500 after:bottom-0 after:left-0 pb-2">महत्वपूर्ण लिंक</h3>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="about.html" class="hover:text-village-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> गांव के बारे में</a></li>
+                        <li><a href="gallery.html" class="hover:text-village-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> फोटो गैलरी</a></li>
+                        <li><a href="education.html" class="hover:text-village-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> शिक्षा</a></li>
+                        <li><a href="services.html" class="hover:text-village-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> ग्राम सेवाएं</a></li>
+                        <li><a href="#location-section" class="hover:text-village-400 transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> मैप व लोकेशन</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6 text-white relative inline-block after:content-[''] after:absolute after:w-1/2 after:h-0.5 after:bg-village-500 after:bottom-0 after:left-0 pb-2">संपर्क / पता</h3>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 w-6 h-6 rounded bg-gray-800 flex items-center justify-center flex-shrink-0 text-village-400">
+                                <i class="fa-solid fa-location-dot text-xs"></i>
+                            </div>
+                            <span>ग्राम - मेड़ा, पंचायत - [ADD],<br> प्रखंड - कटोरिया, जिला - बांका,<br> बिहार, भारत</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded bg-gray-800 flex items-center justify-center flex-shrink-0 text-village-400">
+                                <i class="fa-solid fa-envelope text-xs"></i>
+                            </div>
+                            <a href="mailto:info@merhavillage.in" class="hover:text-white transition-colors">info@merhavillage.in <br><span class="text-[10px] text-gray-600">(Placeholder)</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Legal / Note -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6 text-white relative inline-block after:content-[''] after:absolute after:w-1/2 after:h-0.5 after:bg-village-500 after:bottom-0 after:left-0 pb-2">सूचना</h3>
+                    <ul class="space-y-3 text-sm text-gray-400 mb-4">
+                        <li><a href="privacy.html" class="hover:text-white transition-colors">प्राइवेसी पॉलिसी</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-white transition-colors">डिस्क्लेमर</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">संपर्क करें</a></li>
+                    </ul>
+                    <div class="p-4 bg-gray-800/50 rounded-xl border border-gray-700 text-xs text-gray-400 leading-relaxed shadow-inner">
+                        <strong class="text-village-400"><i class="fa-solid fa-circle-exclamation mr-1"></i> नोट:</strong> यह एक स्वतंत्र कम्युनिटी पोर्टल है। किसी भी सरकारी प्रमाणित जानकारी के लिए कृपया संबंधित विभाग की आधिकारिक वेबसाइट देखें।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; <span id="current-year"></span> ग्राम मेड़ा (Merha Village). सर्वाधिकार सुरक्षित।</p>
+                <p class="mt-2 md:mt-0 flex items-center gap-1">
+                    Made with <i class="fa-solid fa-heart text-red-500"></i> for Merha, Banka.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Large background icon -->
+        <i class="fa-solid fa-leaf absolute -bottom-10 -right-10 text-[200px] text-white opacity-[0.02] -z-0 transform -rotate-12"></i>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize AOS Animation Library
+            AOS.init({
+                once: true, // whether animation should happen only once - while scrolling down
+                offset: 50, // offset (in px) from the original trigger point
+                duration: 800, // values from 0 to 3000, with step 50ms
+                easing: 'ease-out-cubic', // default easing for AOS animations
+            });
+
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Mobile menu toggle logic with animation
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const bar1 = document.getElementById('bar1');
+            const bar2 = document.getElementById('bar2');
+            const bar3 = document.getElementById('bar3');
+
+            btn.addEventListener('click', () => {
+                const isOpen = menu.classList.contains('open');
+                
+                if (isOpen) {
+                    // Close Menu
+                    menu.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    
+                    // Hamburger animation back
+                    bar1.classList.remove('rotate-45', 'translate-y-2');
+                    bar2.classList.remove('opacity-0');
+                    bar3.classList.remove('-rotate-45', '-translate-y-2');
+                } else {
+                    // Open Menu
+                    menu.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                    
+                    // Hamburger animation to X
+                    bar1.classList.add('rotate-45', 'translate-y-2');
+                    bar2.classList.add('opacity-0');
+                    bar3.classList.add('-rotate-45', '-translate-y-2');
+                }
+            });
+
+            // Close mobile menu when clicking a link inside it
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    bar1.classList.remove('rotate-45', 'translate-y-2');
+                    bar2.classList.remove('opacity-0');
+                    bar3.classList.remove('-rotate-45', '-translate-y-2');
+                });
+            });
+
+            // Header scroll effect
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    header.classList.add('shadow-md');
+                    header.classList.replace('bg-white/85', 'bg-white/95');
+                } else {
+                    header.classList.remove('shadow-md');
+                    header.classList.replace('bg-white/95', 'bg-white/85');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
